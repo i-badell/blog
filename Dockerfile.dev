@@ -1,5 +1,5 @@
 # Use the official Go image (Alpine version for a smaller image)
-FROM golang:1.20-alpine
+FROM golang:1.23-alpine
 
 # Install git (needed for module downloads) and any other tools you need
 RUN apk add --no-cache git
@@ -15,7 +15,7 @@ RUN go mod download
 COPY . .
 
 # Install Air for live reloading.
-RUN go install github.com/cosmtrek/air@latest
+RUN go install github.com/air-verse/air@latest
 
 # Expose the port your app uses.
 EXPOSE 8080

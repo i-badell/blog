@@ -17,6 +17,7 @@ import (
 type Post struct {
 	Title   string
 	Summary string
+	Image   string
 	Tags    []string
 	Content template.HTML // Converted HTML from Markdown
 	Date    string
@@ -72,6 +73,7 @@ func loadPosts() ([]Post, error) {
 		post := Post{
 			Title:   metaData["Title"].(string),
 			Summary: metaData["Summary"].(string),
+			Image:   metaData["Image"].(string),
 			Tags:    parsedTags,
 			Content: template.HTML(buf.String()),
 			Date:    time.Now().Format("January 2, 2006"),

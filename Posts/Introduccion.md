@@ -2,6 +2,7 @@
 Title: Introducción
 Summary: Que es esta sección?
 Date: 2025/01/09
+Image: nacho_ema.jpeg
 Tags:
   - Linkedin
 ---

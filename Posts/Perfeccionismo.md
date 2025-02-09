@@ -2,6 +2,7 @@
 Title: Perfección
 Summary: El enemigo silencioso en mi viaje como desarrollador.
 Date: 2025/01/09
+Image: nacho_ema.jpeg
 Tags:
   - Linkedin
   - Filosofía
