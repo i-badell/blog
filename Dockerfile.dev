@@ -1,0 +1,24 @@
+# Use the official Go image (Alpine version for a smaller image)
+FROM golang:1.20-alpine
+
+# Install git (needed for module downloads) and any other tools you need
+RUN apk add --no-cache git
+
+# Set the working directory inside the container.
+WORKDIR /app
+
+# Copy go.mod and go.sum first to cache module downloads.
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Copy the entire source code.
+COPY . .
+
+# Install Air for live reloading.
+RUN go install github.com/cosmtrek/air@latest
+
+# Expose the port your app uses.
+EXPOSE 8080
+
+# By default, run Air (it will look for .air.toml if present or use defaults).
+CMD ["air"]

@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  blogserver:
+    # Use the development Dockerfile.
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    # Mount the current directory into /app inside the container.
+    volumes:
+      - .:/app
+      # Optional: if you want to persist Go module downloads outside the container.
+      - go-cache:/go/pkg/mod
+    ports:
+      - "8080:8080"
+    # Optionally, you can override the command:
+    # command: ["air"]
+
+volumes:
+  go-cache:
