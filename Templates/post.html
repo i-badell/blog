@@ -1,0 +1,28 @@
+{{ range .}}
+<article class="post">
+  <header>
+    <div class="title">
+      <h2><a href="single.html">{{ .Title }}</a></h2>
+      <p>{{ .Summary }}</p>
+    </div>
+    <div class="meta">
+      <time class="published" datetime="{{ .Date }}">{{ .Date }}</time>
+      <p>{{ range .Tags }} {{ . }} {{ end }}</p>
+    </div>
+  </header>
+  <a href="single.html" class="image featured"
+    ><img src="images/pic01.jpg" alt=""
+  /></a>
+  {{ .Content }}
+  <footer>
+    <ul class="actions">
+      <li><a href="single.html" class="button large">Continue Reading</a></li>
+    </ul>
+    <ul class="stats">
+      <li><a href="#">General</a></li>
+      <li><a href="#" class="icon solid fa-heart">28</a></li>
+      <li><a href="#" class="icon solid fa-comment">128</a></li>
+    </ul>
+  </footer>
+</article>
+{{ end }}
