@@ -7,7 +7,7 @@ Tags:
   - Relfexión
 ---
 
-# *in*Estabilidad
+# _in_-Estabilidad
 
 Hace unos dias estaba mirando un episodio del podcast de (Andrew Huberman)[] en donde esta con la dra xxx. Recomiendo mirar el capitulo y sacar sus c[]
 La relación que tenemos con el mundo que nos rodea es una en la que esperamos que el no cambie

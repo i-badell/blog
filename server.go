@@ -69,14 +69,18 @@ func loadPosts() ([]Post, error) {
 			parsedTags = append(parsedTags, i.(string))
 		}
 
-		// TODO: extract the date from frontmatter.
+		date, err := time.Parse("2006/01/02", metaData["Date"].(string))
+		if err != nil {
+			panic(err)
+		}
+
 		post := Post{
 			Title:   metaData["Title"].(string),
 			Summary: metaData["Summary"].(string),
 			Image:   metaData["Image"].(string),
 			Tags:    parsedTags,
 			Content: template.HTML(buf.String()),
-			Date:    time.Now().Format("January 2, 2006"),
+			Date:    date.Format("02/01/2006"),
 		}
 		posts = append(posts, post)
 	}
@@ -94,17 +98,13 @@ func postsHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error rendering posts template", http.StatusInternalServerError)
 	}
 }
-
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "./Public/index.html")
 }
 
 func main() {
-	// Register the /posts endpoint.
 	http.HandleFunc("/posts", postsHandler)
 
-	// Serve all files under the "public" directory.
-	// This will serve index.html (and other assets) from public/.
 	fs := http.FileServer(http.Dir("public"))
 	http.Handle("/", fs)
 

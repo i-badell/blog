@@ -7,8 +7,8 @@ Tags:
   - Linkedin
 ---
 
-Esta es la primera -de espero muchas- reflexiones sobre la industria del software (con la total subjetividad y el total sesgo de mi experiencia personal) que ojala que
-resuenen fuera del ambito profesional y algo quede por ahi resonando.
+Esta es la primera -de espero muchas- reflexiones sobre la industria del software (con la total subjetividad y el total sesgo de mi experiencia personal), ojala logres identificarte o al menos
+el mensaje sea lo suficientemente claro como para .
 Estas reflexiones no hablan de como el gesto de un barista en una cafeteria me hizo pensar en un paralelismo en el cual afirme mis creencias que el trabajo en equipo y
 la valentia de liderar son lo que van a ponerte en la cabecera de tu industria y tu marca personal.
 
